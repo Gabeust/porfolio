@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Gabriel Romero - Backend Developer especializado en Java y arquitecturas modernas">
+    <title>Gabriel Romero | Backend Developer</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Simple Icons CDN for tech logos -->
+    <script src="https://unpkg.com/simple-icons@latest/icons.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <span class="logo-text">GR<span class="cursor-blink">_</span></span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                <li><a href="#certifications" class="nav-link">Certificaciones</a></li>
+                <li><a href="#tech" class="nav-link">Tecnologías</a></li>
+                <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                <li><a href="#contact" class="nav-link contact-btn">Contacto</a></li>
+            </ul>
+            <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-grid"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-tag">Desarrollador Backend</div>
+                    <h1 class="hero-title">
+                        Gabriel<br>
+                        <span class="gradient-text">Romero</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Especializado en <span class="highlight">Java</span> y <span class="highlight">arquitecturas
+                            modernas</span>.
+                        <br>Construyo soluciones backend robustas, seguras y escalables.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contact" class="btn btn-secondary">Contactar</a>
+                    </div>
+                    <div class="hero-social">
+                        <a href="#" onclick="openSocial('github'); return false;" class="social-link" title="GitHub">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </a>
+                        <a href="#" onclick="openSocial('linkedin'); return false;" class="social-link"
+                            title="LinkedIn">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </a>
+                        <a href="#" onclick="openSocial('email'); return false;" class="social-link" title="Email">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                                </path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="image-wrapper">
+                        <div class="image-glow"></div>
+                        <img src="foto_perfil.png" alt="Gabriel Romero" class="profile-pic">
+                        <div class="status-badge">
+                            <span class="status-dot"></span>
+                            Disponible para proyectos
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">01 / Sobre mí</span>
+                <h2 class="section-title">
+                    Desarrollador Backend con enfoque en<br>
+                    <span class="gradient-text">arquitectura, escalabilidad y cloud</span>
+                </h2>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        Soy <strong>Desarrollador Backend especializado en Java y Spring Boot</strong>,
+                        con sólida formación en diseño de APIs REST seguras, modelado de dominio complejo
+                        y construcción de sistemas mantenibles.
+                    </p>
+                    <p>
+                        Trabajo con <strong>Spring Security + JWT</strong>,
+                        arquitectura en capas, DTOs y mapeo estructurado,
+                        aplicando buenas prácticas de diseño, validaciones robustas
+                        y separación clara de responsabilidades.
+                    </p>
+                    <p>
+                        Despliego y gestiono aplicaciones en entornos cloud como
+                        <strong>Oracle Cloud Infrastructure (OCI)</strong>,
+                        utilizando <strong>Docker</strong> para contenerización
+                        y herramientas de build como <strong>Maven</strong>
+                        dentro de un flujo orientado a entrega continua.
+                    </p>
+                    <p>
+                        Aporto <strong>visión de gestión y liderazgo de equipos</strong> 
+                        desarrollada en trayectorias previas, complementada con 
+                        <strong>formación técnica intensiva en backend y cloud</strong>.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Años desarrollando soluciones backend</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">16</div>
+                        <div class="stat-label">Certificaciones técnicas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">10+</div>
+                        <div class="stat-label">Proyectos implementados</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="certifications">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">02 / Formación Backend & Cloud</span>
+                <h2 class="section-title">Especialización <span class="gradient-text">técnica</span></h2>
+            </div>
+            <div class="certifications-grid">
+                <div class="cert-card">
+                    <div class="cert-icon">🏆</div>
+                    <h3>Oracle Cloud Infrastructure 2025</h3>
+                    <p>Certified Foundations Associate - Oracle</p>
+                    <span class="cert-date">Oct 2025</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🗄️</div>
+                    <h3>Formación SQL con MySQL Server de Oracle</h3>
+                    <p>Alura Latam - ONE</p>
+                    <span class="cert-date">Sept 2025</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🚀</div>
+                    <h3>Desarrollo de APIs en Java con Spring Boot</h3>
+                    <p>TodoCode</p>
+                    <span class="cert-date">Abr 2024</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🔐</div>
+                    <h3>Seguridad con Spring Security</h3>
+                    <p>TodoCode</p>
+                    <span class="cert-date">Oct 2024</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">☕</div>
+                    <h3>Bootcamp de Java Avanzado</h3>
+                    <p>Código Facilito</p>
+                    <span class="cert-date">Abr 2025</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🎯</div>
+                    <h3>Bootcamp de Microservicios con Java</h3>
+                    <p>Código Facilito</p>
+                    <span class="cert-date">Jun 2025</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🎓</div>
+                    <h3>Programa ONE Tech Foundation G8 - Back End</h3>
+                    <p>Alura Latam</p>
+                    <span class="cert-date">Jul 2025</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">📦</div>
+                    <h3>Programación Orientada a Objetos con Java</h3>
+                    <p>TodoCode</p>
+                    <span class="cert-date">Jun 2023</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">💻</div>
+                    <h3>Programador Full Stack Jr.</h3>
+                    <p>Argentina Programa 4.0</p>
+                    <span class="cert-date">May 2023</span>
+                </div>
+                <div class="cert-card">
+                    <div class="cert-icon">🎨</div>
+                    <h3>Primeros pasos del desarrollo FrontEnd</h3>
+                    <p>Ticmas</p>
+                    <span class="cert-date">Dic 2022</span>
+                </div>
+            </div>
+
+            <div class="section-header" style="margin-top: 4rem;">
+                <span class="section-tag">Formación Complementaria</span>
+                <h3 class="section-subtitle">Blockchain, Data Science y especializaciones adicionales</h3>
+            </div>
+            <div class="certifications-grid complementary">
+                <div class="cert-card secondary">
+                    <div class="cert-icon">⛓️</div>
+                    <h3>Curso de Blockchain</h3>
+                    <p>Universidad Blas Pascal</p>
+                    <span class="cert-date">May 2025</span>
+                </div>
+                <div class="cert-card secondary">
+                    <div class="cert-icon">💎</div>
+                    <h3>Ethereum Developer Pack - Talento Tech & ETH KIPU</h3>
+                    <p>Ministerio de Educación CABA</p>
+                    <span class="cert-date">Ago 2025 - Ago 2027</span>
+                </div>
+                <div class="cert-card secondary">
+                    <div class="cert-icon">💾</div>
+                    <h3>Big Data (Ciencia de Datos)</h3>
+                    <p>Codo a Codo 4.0 - Buenos Aires</p>
+                    <span class="cert-date">Ene 2023</span>
+                </div>
+                <div class="cert-card secondary">
+                    <div class="cert-icon">🐍</div>
+                    <h3>Procesamiento de datos con Python</h3>
+                    <p>Ticmas</p>
+                    <span class="cert-date">Ago 2023</span>
+                </div>
+                <div class="cert-card secondary">
+                    <div class="cert-icon">📈</div>
+                    <h3>Experto universitario en mercados de capitales</h3>
+                    <p>Centro de e-Learning UTN FRBA</p>
+                    <span class="cert-date">Oct 2021</span>
+                </div>
+                <div class="cert-card secondary">
+                    <div class="cert-icon">🔧</div>
+                    <h3>Técnico en armado, reparación de PC y redes</h3>
+                    <p>UTN Buenos Aires</p>
+                    <span class="cert-date">Ene 2006</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tech Stack Section -->
+    <section id="tech" class="tech-stack">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">03 / Stack Tecnológico</span>
+                <h2 class="section-title">Tecnologías que<br><span class="gradient-text">domino</span></h2>
+            </div>
+            <div class="tech-grid">
+                <div class="tech-card" data-tech="java">
+                    <div class="tech-icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java">
+                    </div>
+                    <h3>Java</h3>
+                    <p>Backend robusto y concurrente</p>
+                </div>
+                <div class="tech-card" data-tech="spring">
+                    <div class="tech-icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"
+                            alt="Spring Boot">
+                    </div>
+                    <h3>Spring Boot</h3>
+                    <p>Framework enterprise de confianza</p>
+                </div>
+                <div class="tech-card" data-tech="kafka">
+                    <div class="tech-icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/apachekafka/apachekafka-original.svg"
+                            alt="Kafka">
+                    </div>
+                    <h3>Kafka</h3>
+                    <p>Event streaming en tiempo real</p>
+                </div>
+                <div class="tech-card" data-tech="docker">
+                    <div class="tech-icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg"
+                            alt="Docker">
+                    </div>
+                    <h3>Docker</h3>
+                    <p>Contenedores y deploy ágil</p>
+                </div>
+                <div class="tech-card" data-tech="mysql">
+                    <div class="tech-icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"
+                            alt="MySQL">
+                    </div>
+                    <h3>MySQL</h3>
+                    <p>Bases de datos relacionales</p>
+                </div>
+                <div class="tech-card" data-tech="redis">
+                    <div class="tech-icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/redis/redis-original.svg"
+                            alt="Redis">
+                    </div>
+                    <h3>Redis</h3>
+                    <p>Cache y mensajería rápida</p>
+                </div>
+                <div class="tech-card" data-tech="jwt">
+                    <div class="tech-icon-img">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="color: #d63aff;">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z" />
+                        </svg>
+                    </div>
+                    <h3>JWT & OAuth</h3>
+                    <p>Autenticación segura</p>
+                </div>
+                <div class="tech-card" data-tech="websocket">
+                    <div class="tech-icon-img">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="color: #010101;">
+                            <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
+                        </svg>
+                    </div>
+                    <h3>WebSocket</h3>
+                    <p>Comunicación bidireccional</p>
+                </div>
+                <div class="tech-card" data-tech="graalvm">
+                    <div class="tech-icon-img">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="color: #e42529;">
+                            <path
+                                d="M12 2L2 7v10l10 5 10-5V7L12 2zm0 2.18L19.82 8 12 11.82 4.18 8 12 4.18zM4 9.82l7 3.5v7.36l-7-3.5V9.82zm16 0v7.36l-7 3.5v-7.36l7-3.5z" />
+                        </svg>
+                    </div>
+                    <h3>GraalVM</h3>
+                    <p>Performance optimizado</p>
+                </div>
+                <div class="tech-card" data-tech="bigdata">
+                    <div class="tech-icon-img">
+                        <svg viewBox="0 0 24 24" fill="currentColor" style="color: #ff6f00;">
+                            <path
+                                d="M21 16.5c0 .38-.21.71-.53.88l-7.9 4.44c-.16.12-.36.18-.57.18-.21 0-.41-.06-.57-.18l-7.9-4.44A.991.991 0 0 1 3 16.5v-9c0-.38.21-.71.53-.88l7.9-4.44c.16-.12.36-.18.57-.18.21 0 .41.06.57.18l7.9 4.44c.32.17.53.5.53.88v9M12 4.15L6.04 7.5 12 10.85l5.96-3.35L12 4.15M5 15.91l6 3.38v-6.71L5 9.21v6.7m14 0v-6.7l-6 3.37v6.71l6-3.38z" />
+                        </svg>
+                    </div>
+                    <h3>Big Data</h3>
+                    <p>Ciencia de datos aplicada</p>
+                </div>
+                <div class="tech-card" data-tech="solidity">
+                    <div class="tech-icon-img">
+                        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/solidity/solidity-original.svg"
+                            alt="Solidity">
+                    </div>
+                    <h3>Solidity</h3>
+                    <p>Smart contracts blockchain</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">04 / Proyectos</span>
+                <h2 class="section-title">Construyendo el <span class="gradient-text">futuro</span><br>un proyecto a la vez</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Ordinex -->
+                <div class="project-card featured saas-product">
+                    <div class="project-number">01</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Ordinex</h3>
+                            <div class="project-tags">
+                                <span class="tag">SaaS</span>
+                                <span class="tag">Full Stack</span>
+                                <span class="tag">En Producción</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Sistema de gestión de órdenes de trabajo orientado a empresas de servicios técnicos. 
+                            Arquitectura completa: diseño de base de datos, API REST con Spring Boot, 
+                            autenticación JWT, autorización basada en roles, y deploy en Oracle Cloud Infrastructure.
+                        </p>
+                        <div class="demo-credentials">
+                            <div class="credentials-header">
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <path d="M12 16v-4"></path>
+                                    <path d="M12 8h.01"></path>
+                                </svg>
+                                <span>Credenciales de prueba:</span>
+                            </div>
+                            <div class="credentials-content">
+                                <div class="credential-item">
+                                    <span class="credential-label">Usuario:</span>
+                                    <code class="credential-value">DEMO</code>
+                                </div>
+                                <div class="credential-item">
+                                    <span class="credential-label">Contraseña:</span>
+                                    <code class="credential-value">demo1234</code>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>Spring Security</span>
+                            <span>JWT</span>
+                            <span>MySQL</span>
+                            <span>Redis</span>
+                            <span>OCI</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://ordinex-tau.vercel.app/" target="_blank" rel="noopener" class="project-link demo-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <circle cx="12" cy="12" r="10"></circle>
+                                    <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                                </svg>
+                                Ver Demo
+                            </a>
+                            <a href="#contact" class="project-link contact-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+                                </svg>
+                                Consultar
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FlightOnTime -->
+                <div class="project-card featured">
+                    <div class="project-number">02</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>FlightOnTime</h3>
+                            <div class="project-tags">
+                                <span class="tag">Hackatón 2025</span>
+                                <span class="tag">Machine Learning</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Solución predictiva desarrollada en el Hackatón ONE – No Country 2025. Estima la
+                            probabilidad de que un vuelo despegue puntual o con retraso usando datos históricos y
+                            características del vuelo.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Boot</span>
+                            <span>ML</span>
+                            <span>API REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/gabeust/flightOnTime" target="_blank" rel="noopener"
+                                class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- ForoHub -->
+                <div class="project-card">
+                    <div class="project-number">03</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>ForoHub</h3>
+                            <div class="project-tags">
+                                <span class="tag">Full Stack</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Plataforma completa para foros y comunidades. Backend Java robusto con JWT, roles, OAuth
+                            y notificaciones en tiempo real con Kafka.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>Spring Security</span>
+                            <span>Kafka</span>
+                            <span>JWT</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/gabeust/forohub-one" target="_blank" rel="noopener"
+                                class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CryptoConcurrency -->
+                <div class="project-card">
+                    <div class="project-number">04</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>CryptoConcurrency</h3>
+                            <div class="project-tags">
+                                <span class="tag">Performance</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Análisis concurrente de criptomonedas en Java. Uso intensivo de Streams, ExecutorService
+                            y optimización con GraalVM para máximo rendimiento.
+                        </p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>GraalVM</span>
+                            <span>Concurrency</span>
+                            <span>Streams</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/gabeust/CryptoConcurrency" target="_blank" rel="noopener"
+                                class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SimpleSwap -->
+                <div class="project-card">
+                    <div class="project-number">05</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>SimpleSwap</h3>
+                            <div class="project-tags">
+                                <span class="tag">Blockchain</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Smart contract en Solidity que replica Uniswap V2. Implementa swaps, gestión de
+                            liquidez, tokens ERC-20 y frontend tipo DEX.
+                        </p>
+                        <div class="project-tech">
+                            <span>Solidity</span>
+                            <span>Ethereum</span>
+                            <span>Web3</span>
+                            <span>DeFi</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/gabeust/eth-piku-simpleSwap" target="_blank" rel="noopener"
+                                class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Microservicio Bodega -->
+                <div class="project-card">
+                    <div class="project-number">06</div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <h3>Microservicio para Bodega</h3>
+                            <div class="project-tags">
+                                <span class="tag">Microservicios</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Sistema distribuido para tienda de vinos. Arquitectura de microservicios con
+                            comunicación asíncrona mediante Kafka, WebSocket y gateway JWT.
+                        </p>
+                        <div class="project-tech">
+                            <span>Spring Boot</span>
+                            <span>Kafka</span>
+                            <span>WebSocket</span>
+                            <span>Gateway</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/gabeust/CF-MS-Bodega" target="_blank" rel="noopener"
+                                class="project-link">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                    </path>
+                                </svg>
+                                Ver Código
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header center">
+                <h2 class="section-title">¿Trabajamos<br><span class="gradient-text">juntos</span>?</h2>
+                <p class="section-description">Estoy abierto a nuevas oportunidades y colaboraciones. Dejame tu mensaje
+                    y te respondo a la brevedad.</p>
+            </div>
+
+            <div class="contact-wrapper">
+                <div class="contact-form-container">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Nombre *</label>
+                                <input type="text" id="name" name="name" required placeholder="Tu nombre">
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email *</label>
+                                <input type="email" id="email" name="_replyto" required placeholder="tu@email.com">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Asunto *</label>
+                            <input type="text" id="subject" name="_subject" required
+                                placeholder="¿De qué querés hablar?">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Mensaje *</label>
+                            <textarea id="message" name="message" required
+                                placeholder="Contame sobre tu proyecto o propuesta..." rows="6"></textarea>
+                        </div>
+
+                        <!-- Formspree honeypot -->
+                        <input type="text" name="_gotcha" style="display:none">
+
+                        <button type="submit" class="btn btn-primary btn-large">
+                            Enviar Mensaje
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <line x1="22" y1="2" x2="11" y2="13"></line>
+                                <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                            </svg>
+                        </button>
+
+                        <div id="formStatus" class="form-status"></div>
+                    </form>
+                </div>
+
+                <div class="contact-info-sidebar">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Ubicación</h3>
+                        <p>Buenos Aires, Argentina</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"></path>
+                            </svg>
+                        </div>
+                        <h3>Email</h3>
+                        <p class="contact-link-text">Vía formulario</p>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z">
+                                </path>
+                                <rect x="2" y="9" width="4" height="12"></rect>
+                                <circle cx="4" cy="4" r="2"></circle>
+                            </svg>
+                        </div>
+                        <h3>LinkedIn</h3>
+                        <a href="#" class="social-link-btn" data-social="linkedin"
+                            onclick="openSocial('linkedin'); return false;">Ver Perfil</a>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path
+                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                                </path>
+                            </svg>
+                        </div>
+                        <h3>GitHub</h3>
+                        <a href="#" class="social-link-btn" data-social="github"
+                            onclick="openSocial('github'); return false;">Ver Repositorios</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <p>&copy; 2026 Gabriel Romero - Desarrollador Backend</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
